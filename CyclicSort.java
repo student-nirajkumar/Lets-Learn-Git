@@ -8,11 +8,13 @@ public class CyclicSort {
             int n= arr.length;
             int i=0;
             while(i<n){
-                if(arr[i]==i+1){
-                i++;
+                    int correct=arr[i]-1;
+                if(arr[i]!=arr[correct]){
+                          swap(arr,i, correct);
+               
                 }
                 else{ 
-                swap(arr,i, arr[i]-1);
+                     i++;
                 }
             }
     
