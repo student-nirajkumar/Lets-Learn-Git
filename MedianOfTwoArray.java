@@ -1,7 +1,8 @@
+import java.util.Arrays;
 public class MedianOfTwoArray {
     public static void main(String args[]){
-        int a[]={2,3,4};
-        int b[]={5,6,7,8,9};
+        int a[]={1,3};
+        int b[]={2};
         int c[]=new int[a.length+b.length];
         for(int i=0;i<a.length; i++){
             c[i]=a[i];
@@ -13,6 +14,7 @@ public class MedianOfTwoArray {
             System.out.print(c[i]+" ");
 
         }
+        Arrays.sort(c);
         System.out.println();
         if(c.length%2!=0){
             int m=c[c.length/2];
