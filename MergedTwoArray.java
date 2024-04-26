@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class MergedTwoArray {
     public static void main(String args[]){
         int a[]={2,3,4};
@@ -9,6 +10,7 @@ public class MergedTwoArray {
         for(int i=0; i<b.length; i++){
             c[a.length+i]=b[i];
         }
+        Arrays.sort(c);
         for(int i=0;i<c.length; i++){
             System.out.print(c[i]+" ");
 
