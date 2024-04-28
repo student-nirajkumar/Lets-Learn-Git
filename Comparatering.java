@@ -23,7 +23,7 @@ class IteamComparator implements Comparator<Iteam> {
     }
 }
 
-public class Main {
+public class Comparatering {
     public static void main(String[] args) {
         List<Iteam> items = new ArrayList<>();
         items.add(new Iteam(10, 2));
