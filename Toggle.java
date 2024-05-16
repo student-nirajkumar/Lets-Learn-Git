@@ -1,14 +1,15 @@
-import java.util.*;
-import java.util.Scanner;
+//import java.util.*;
+//import java.util.Scanner;
 public class Toggle {
     public static void main(String [] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println(" Enter The String :");
-        String str = sc.nextLine();
-        StringBuilder sb= new StringBuilder(str);
-        for(int i=0; i<str.length(); i++){
+        //Scanner sc = new Scanner(System.in);
+       // System.out.println(" Enter The String :");
+        //String sb = sc.nextLine();
+        String str1="PhySICS";
+        StringBuilder sb= new StringBuilder(str1);
+        for(int i=0; i<sb.length(); i++){
             boolean flag = true;
-            char ch= str.charAt(i);
+            char ch= sb.charAt(i);
             if(ch ==' ') continue;
             int ascii = (int) ch;
             if(ascii>=97) flag= false;
@@ -23,7 +24,7 @@ public class Toggle {
                 sb.setCharAt(i, cd);
             }
         }
-        System.out.print(sb.toString() + " ");
+        System.out.print(sb);
 
     }
 
