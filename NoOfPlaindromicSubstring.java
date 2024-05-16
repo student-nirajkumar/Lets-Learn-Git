@@ -11,7 +11,7 @@ public class NoOfPlaindromicSubstring {
     }
     public static void main(String args[])
     {
-        String str1="abcd";
+        String str1="abbd";
         int count=0;
         for(int i=0; i<=str1.length()-1; i++ ){
             for(int j=i+1; j<=str1.length(); j++){
@@ -20,8 +20,8 @@ public class NoOfPlaindromicSubstring {
                     count++;
                 }
             }
-            System.out.println();
+          
         }
-        System.out.print("No of Plaindromic Substring are: " + count);
+        System.out.print("\nNo of Plaindromic Substring are: " + count);
     }
 }
