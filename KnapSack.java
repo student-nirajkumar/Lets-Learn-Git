@@ -59,7 +59,7 @@ public class KnapSack {
         int capacity = 50; // Knapsack capacity
         int n = items.length; // Number of items
 
-        Solution solution = new Solution();
+        LongestPrefix solution = new LongestPrefix();
         double maxValue = solution.fractionalKnapsack(capacity, items, n);
 
         System.out.println("Maximum value in knapsack: " + maxValue);
