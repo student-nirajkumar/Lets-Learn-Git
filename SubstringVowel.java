@@ -5,7 +5,7 @@ public class SubstringVowel {
         // Explanation : The possible substrings that only contain vowels are "a" , "o" , "e" , "oe"
         // Input : str = "hgdhpw"
         public static void main(String[] args) {
-            String str = "abjkoe";
+            String str = "aba";
             int count = 0;
     
             for (int i = 0; i < str.length(); i++) {
