@@ -1,18 +1,12 @@
 public class Plaindromell {
-
-    // Define the Node class
     public static class Node {
         int val;
         Node next;
-
-        // Constructor for Node
         public Node(int val) {
             this.val = val;
             this.next = null;
         }
     }
-
-    // Get node at a specific index
     public static Node getAtindex(Node head, int idx) {
         Node temp = head;
         for (int i = 0; i < idx; i++) {
@@ -20,19 +14,13 @@ public class Plaindromell {
         }
         return temp;
     }
-
-    // Check if linked list is a palindrome
-    public boolean isPalindrome(Node head) {
+    public static boolean isPalindrome(Node head) {
         Node temp = head;
         int len = 0;
-
-        // Calculate the length of the linked list
         while (temp != null) {
             temp = temp.next;
             len++;
         }
-
-        // Use two-pointer technique to check if it's a palindrome
         int i = 0;
         int j = len - 1;
         while (i < j) {
@@ -46,8 +34,6 @@ public class Plaindromell {
         }
         return true;
     }
-
-    // Print the linked list
     public static void printLinkedList(Node head) {
         Node current = head;
         while (current != null) {
@@ -56,29 +42,20 @@ public class Plaindromell {
         }
         System.out.println();
     }
-
-    // Main function to test the code
     public static void main(String[] args) {
-        // Creating the linked list
-        Node a = new Node(10);
-        Node b = new Node(20);
-        Node c = new Node(30);
-        Node d = new Node(40);
-        Node e = new Node(50);
+        Node a = new Node(1);
+        Node b = new Node(2);
+        Node c = new Node(2);
+        Node d = new Node(1);
+       // Node e = new Node(50);
         a.next = b;
         b.next = c;
         c.next = d;
-        d.next = e;
-
-        // Print the linked list
+       // d.next = e;
         System.out.print("Linked List: ");
         printLinkedList(a);
-
-        // Create an instance of Plaindromell class
-        Plaindromell obj = new Plaindromell();
-
-        // Check if the linked list is a palindrome
-        if (obj.isPalindrome(a)) {
+       // Plaindromell obj = new Plaindromell();
+        if (isPalindrome(a)) {
             System.out.println("The linked list is a palindrome.");
         } else {
             System.out.println("The linked list is not a palindrome.");
