@@ -1,5 +1,3 @@
-
-
 /*public class ArrayImplementation {
     static class Stack {
         int[] arr = new int[5]; 
@@ -22,16 +20,27 @@
             }
         }
 
-        public int peek() {
+        public void peek() {
             if (idx >= 0) { 
-                return arr[idx];
+                System.out.println(arr[idx]);
             } else {
-                throw new RuntimeException("Stack is empty"); 
+                System.out.println("Stack is empty");
             }
         }
 
         public int size() {
             return idx + 1; 
+        }
+
+        public void display() {
+            if (idx >= 0) {
+                for (int i = idx; i >= 0; i--) {
+                    System.out.print(arr[i] + " ");
+                }
+                System.out.println();
+            } else {
+                System.out.println("Stack is empty");
+            }
         }
     }
 
@@ -41,9 +50,15 @@
         st.push(10);
         st.push(20);
         st.push(30);
-        System.out.print(st.size() + " "); 
+        System.out.print(st.size() + " ");
+        st.display();
+
+        st.pop();
+        st.pop();
+        st.pop();
+        st.peek();  // This will now print "Stack is empty" without throwing an exception
     }
-}/* */ 
+} /* */
 
 import java.util.ArrayList;
 
@@ -52,12 +67,12 @@ public class ArrayListImplementation {
         private ArrayList<Integer> arr = new ArrayList<>();
 
         public void push(int val) {
-            arr.add(val);  // Automatically resizes
+            arr.add(val);
         }
 
         public void pop() {
             if (!arr.isEmpty()) {
-                arr.remove(arr.size() - 1);  // Removes the last element
+                arr.remove(arr.size() - 1);
             } else {
                 System.out.println("Stack underflow");
             }
@@ -65,14 +80,25 @@ public class ArrayListImplementation {
 
         public void peek() {
             if (!arr.isEmpty()) {
-                System.out.println(arr.get(arr.size() - 1));  // Prints the last element
+                System.out.println(arr.get(arr.size() - 1));
             } else {
-                System.out.println("Stack is empty");  // Print statement instead of exception
+                System.out.println("Stack is empty");
             }
         }
 
         public int size() {
-            return arr.size();  // Returns the number of elements
+            return arr.size();
+        }
+
+        public void display() {
+            if (!arr.isEmpty()) {
+                for (int i = arr.size() - 1; i >= 0; i--) {
+                    System.out.print(arr.get(i) + " ");
+                }
+                System.out.println();
+            } else {
+                System.out.println("Stack is empty");
+            }
         }
     }
 
@@ -83,13 +109,16 @@ public class ArrayListImplementation {
         st.push(20);
         st.push(30);
         
-        System.out.print(st.size() + " "); // Output: 3
+        System.out.print(st.size() + " ");
         
-        st.peek();  // Output: 30
+        st.peek();
+        st.display();
         st.pop();
-        st.peek();  // Output: 20
+        st.peek();
+        st.display();
         st.pop();
         st.pop();
-        st.peek();  // Output: Stack is empty
+        st.peek();
     }
 }
+
