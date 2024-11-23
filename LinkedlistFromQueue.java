@@ -40,8 +40,10 @@ public class LinkedlistFromQueue {
                 System.out.print("Queue is Empty!");
                 return;
             }
+            Node temp = head;
             head = head.next;
             size--;
+            delete(temp);//wastage nahi ho rahi hai
         }
 
         // Front element of the queue
