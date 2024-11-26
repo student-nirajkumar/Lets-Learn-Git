@@ -10,22 +10,40 @@ public class FloydWarshallAlgorithm {
         };
 
         int[][] dist = floydWarshall(graph);
-    
+        
+        for (int i = 0; i < dist.length; i++) {
+            for (int j = 0; j < dist[i].length; j++) {
+                if (dist[i][j] == INF) {
+                    System.out.print("INF ");
+                } else {
+                    System.out.print(dist[i][j] + " ");
+                }
+            }
+            System.out.println();
+        }
     }
-    public void floydWarshall(int graph [v][v]){
-        int distance[v][v][v];
-        for(int k=0; i<v; k++){
-            for(int i=0; j<v; i++){
-                for(int j=0; k<v; j++){
-                    if(graph[i][j] == 0 && i!=j){
-                        distance[k][i][j] = INT_MAX;
-                    }
-                    else{
-                        distance[k][i][j] = grap
+
+    public static int[][] floydWarshall(int[][] graph) {
+        int V = graph.length;
+        int[][] dist = new int[V][V];
+
+        for (int i = 0; i < V; i++) {
+            for (int j = 0; j < V; j++) {
+                dist[i][j] = graph[i][j];
+            }
+        }
+
+        for (int k = 0; k < V; k++) {
+            for (int i = 0; i < V; i++) {
+                for (int j = 0; j < V; j++) {
+                    if (dist[i][k] != 99999 && dist[k][j] != 99999 
+                            && dist[i][k] + dist[k][j] < dist[i][j]) {
+                        dist[i][j] = dist[i][k] + dist[k][j];
                     }
                 }
             }
         }
+
+        return dist;
     }
-    
 }
