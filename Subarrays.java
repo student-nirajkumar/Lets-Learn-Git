@@ -10,16 +10,11 @@ public class Subarrays {
             return;
         }
         subarray(ll, arr, n, idx + 1);
-        if(ll.size()==0){
-        ll.add(arr[idx]);
-        subarray(ll, arr, n, idx + 1);
-        }
-        else if(arr[idx-1] ==ll[ll.size()-1]){
+        if (ll.size() == 0 || ll.get(ll.size() - 1) == arr[idx - 1]) {
             ll.add(arr[idx]);
-        subarray(ll, arr, n, idx + 1);
-
+            subarray(ll, arr, n, idx + 1);
+            ll.remove(ll.size() - 1);
         }
-        ll.remove(ll.size() - 1);
     }
 
     public static void main(String[] args) {
