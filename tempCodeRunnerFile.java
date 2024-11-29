@@ -7,13 +7,9 @@ public class SubsetDuplicate {
             return;
         }
 
-        char ch = original.charAt(0); // Current character
-        String rest = original.substring(1); // Remaining string
-
-        // Case 1: Include the current character
+        char ch = original.charAt(0); 
+        String rest = original.substring(1); 
         storeSubstring(ans + ch, rest, ll, true);
-
-        // Case 2: Exclude the current character, but only if it's the first duplicate in the sequence
         if (flag || rest.isEmpty() || rest.charAt(0) != ch) {
             storeSubstring(ans, rest, ll, true);
         }
