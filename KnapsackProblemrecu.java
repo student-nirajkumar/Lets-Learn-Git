@@ -9,8 +9,7 @@ public class KnapsackProblemrecu {
 
         
         else
-            return Math.max(knapSack(W, wt, val, n - 1), 
-             val[n - 1] + knapSack(W - wt[n-1], wt, val, n-1));
+            return Math.max(knapSack(W, wt, val, n - 1), val[n - 1] + knapSack(W - wt[n-1], wt, val, n-1));
     }
 
     public static void main(String args[])
@@ -19,7 +18,6 @@ public class KnapsackProblemrecu {
         int weight[] = new int[] { 10, 20, 30 };
         int W = 50;
         int n = profit.length;
-        System.out.println(knapSack(W, weight, profit, n));
+        System.out.println(knapSack(W, weight, profit, n))
     }
 }
-    
