@@ -20,10 +20,8 @@ public class PAscalTring {
     }
 
     public static void main(String[] args) {
-        int numRows = 5; // Example input
+        int numRows = 5; 
         List<List<Integer>> result = generate(numRows);
-
-        // Print Pascal's Triangle using a regular for loop
         for (int i = 0; i < result.size(); i++) {
             System.out.println(result.get(i));
         }
