@@ -1,18 +1,24 @@
 import java.util.*;
 
 public class Inserduplicate {
-    static ArrayList<Integer> duplicateK(ArrayList<Integer> arr, int k) {
-        int n = arr.size();
-        for (int i = 0; i < n; i++) {
-            if (arr.get(i) == k) {
-                arr.add(i + 1, k);
-                i++;
-            }
-        }
-        while (arr.size() > n) {
-            arr.remove(arr.size() - 1);
-        }
-        return arr;
+    // static ArrayList<Integer> duplicateK(ArrayList<Integer> arr, int k) {
+    //     int n = arr.size();
+    //     for (int i = 0; i < n; i++) {
+    //         if (arr.get(i) == k) {
+    //             arr.add(i + 1, k);
+    //             i++;
+    //         }
+    //     }
+    //     while (arr.size() > n) {
+    //         arr.remove(arr.size() - 1);
+    //     }
+    //     return arr;
+    // }
+    //Method 2;
+    public static int  duplicate(int[]arr, intt k){
+        int countk=0;
+        for(int )
+        
     }
 
     public static void main(String[] args) {
